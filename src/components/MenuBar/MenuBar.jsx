@@ -2,9 +2,20 @@ import React, { useState } from 'react';
 import styles from './MenuBar.module.css';
 import { AppBar, Box, Toolbar, IconButton, Typography, Menu, Container, Avatar, Button, Tooltip, MenuItem } from '@mui/material';
 import { Menu as MenuIcon } from '@mui/icons-material';
+import { Link } from 'react-router-dom';
 
-const pages = ['Products', 'Pricing', 'Blog'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const pages = [
+  { label: 'Products', link: '/products' },
+  { label: 'Pricing', link: '/pricing' },
+  { label: 'Blog', link: '/blog' },
+];
+
+const settings = [
+  { label: 'Profile', link: '/profile' },
+  { label: 'Account', link: '/account' },
+  { label: 'Dashboard', link: '/dashboard' },
+  { label: 'Logout', link: '/logout' },
+];
 
 const MenuBar = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);
@@ -51,8 +62,10 @@ const MenuBar = () => {
               className={styles.menuContainer}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography>{page}</Typography>
+                <MenuItem key={page.label} onClick={handleCloseNavMenu}>
+                  <Link to={page.link} className={styles.link}>
+                    <Typography>{page.label}</Typography>
+                  </Link>
                 </MenuItem>
               ))}
             </Menu>
@@ -60,9 +73,11 @@ const MenuBar = () => {
 
           <Box className={styles.navBox}>
             {pages.map((page) => (
-              <Button key={page} onClick={handleCloseNavMenu} className={styles.menuButton}>
-                {page}
-              </Button>
+              <Link key={page.label} to={page.link} className={styles.link}>
+                <Button onClick={handleCloseNavMenu} className={styles.menuButton}>
+                  {page.label}
+                </Button>
+              </Link>
             ))}
           </Box>
 
@@ -84,8 +99,10 @@ const MenuBar = () => {
               onClose={handleCloseUserMenu}
             >
               {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography>{setting}</Typography>
+                <MenuItem key={setting.label} onClick={handleCloseUserMenu}>
+                  <Link to={setting.link} className={styles.link}>
+                    <Typography>{setting.label}</Typography>
+                  </Link>
                 </MenuItem>
               ))}
             </Menu>

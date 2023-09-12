@@ -7,6 +7,11 @@
   display: block;
 }
 
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
 .navBox {
   flex-grow: 1;
   display: none;
