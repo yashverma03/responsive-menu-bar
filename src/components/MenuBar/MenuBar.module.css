@@ -1,0 +1,60 @@
+.boxContainer {
+  flex-grow: 1;
+  display: flex;
+}
+
+.menuContainer {
+  display: block;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navBox {
+  flex-grow: 1;
+  display: none;
+}
+
+.menuButton {
+  display: block;
+  margin-top: 2px;
+}
+
+.menuButtonText{
+  color:white;
+  margin-left: 20px;
+}
+
+.userContainer {
+  flex-grow: 0;
+}
+
+.iconButton {
+  padding: 0;
+}
+
+.menu {
+  margin-top: 45px;
+}
+
+.message {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 20px;
+}
+
+@media (min-width: 600px) {
+  .boxContainer {
+    display: none;
+  }
+
+  .menuContainer {
+    display: none;
+  }
+
+  .navBox {
+    display: flex;
+  }
+}
