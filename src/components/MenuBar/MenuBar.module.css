@@ -20,7 +20,11 @@
 .menuButton {
   display: block;
   margin-top: 2px;
-  color: white !important;
+}
+
+.menuButtonText{
+  color:white;
+  margin-left: 20px;
 }
 
 .userContainer {

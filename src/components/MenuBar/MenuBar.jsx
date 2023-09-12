@@ -85,7 +85,9 @@ const MenuBar = () => {
               {pages.map((page) => (
                 <Link key={page.label} to={page.link} className={styles.link}>
                   <Button onClick={() => handleMenuItemClick(page.label)} className={styles.menuButton}>
-                    {page.label}
+                    <p className={styles.menuButtonText}>
+                      {page.label}
+                    </p>
                   </Button>
                 </Link>
               ))}
