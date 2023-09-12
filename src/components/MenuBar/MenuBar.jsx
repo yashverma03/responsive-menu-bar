@@ -17,6 +17,8 @@ const settings = [
   { label: 'Logout', link: '/logout' },
 ];
 
+const userName = 'Aria';
+
 const MenuBar = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorElUser, setAnchorElUser] = useState(null);
@@ -84,7 +86,7 @@ const MenuBar = () => {
           <Box className={styles.userContainer}>
             <Tooltip title='Open settings'>
               <IconButton onClick={handleOpenUserMenu} className={styles.iconButton}>
-                <Avatar alt='A user' src='/static/images/avatar/2.jpg' />
+                <Avatar>{userName[0].toUpperCase()}</Avatar>
               </IconButton>
             </Tooltip>
 
