@@ -5,13 +5,13 @@ import { Menu as MenuIcon } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
 
 const pages = [
-  { label: 'Products', link: '/products' },
-  { label: 'Pricing', link: '/pricing' },
-  { label: 'Blog', link: '/blog' },
+  { label: 'Home', link: '/home' },
+  { label: 'About', link: '/about' },
+  { label: 'Contact', link: '/contact' },
 ];
 
 const settings = [
-  { label: 'Profile', link: '/profile' },
+  { label: 'My Profile', link: '/profile' },
   { label: 'Account', link: '/account' },
   { label: 'Dashboard', link: '/dashboard' },
   { label: 'Logout', link: '/logout' },
